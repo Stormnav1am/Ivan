@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mark Ivan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+
+        /* Custom Scrollbar Styles */
+        ::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: black;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: blueviolet;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: darkblue;
+    }
+    
+    body {
+      background-color: black;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden; /* Hide horizontal scrollbar */
+      font-family: "Google Sans", monospace; /* Apply Google Sans font to the entire document */
+      color: white;
+    }
+
+    .image-container {
+      position: relative;
+      display: inline-block;
+      width: 100vw; /* Set the width to fill the viewport */
+      max-width: 100%; /* Set maximum width to prevent overflow */
+      height: 40vh; /* Set the height to fill the viewport */
+    }
+    
+    .image-container .tv {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-image: url(tv-frame.png); /* Replace with the actual TV frame image */
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+    
+    .image-container img {
+      width: 80%;
+      height: 70%;
+      object-fit: fill; /* Fill the entire container without maintaining aspect ratio */
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 55%;
+      transform: translate(-50%, -50%);
+      animation: changeImage 20s linear infinite;
+    }
+    
+    @keyframes changeImage {
+      0%, 15.99% {
+        content: url(legion.gif);
+      }
+      16%, 31.99% {
+        content: url(ride.gif);
+      }
+      32%, 47.99% {
+        content: url(tv.gif);
+      }
+      48%, 63.99% {
+        content: url(pizza.gif);
+      }
+      64%, 79.99% {
+        content: url(retro.gif);
+      }
+      80%, 95.99% {
+        content: url(storm.gif);
+      }
+      96%, 99.99% {
+        content: url(legion.gif);
+      }
+    }
+    
+    .image-container .text-overlay {
+      position: absolute;
+      bottom: 5%;
+      right: 5%;
+      color: white;
+      font-size: 50px;
+      font-weight: bold;
+      text-align: center;
+      font-family: inherit; /* Inherit font-family from the body */
+      animation: glitchText 3s infinite;
+    }
+
+    .profile img {
+      position: relative;
+      left: 5.1%;
+      top: -290.5px;
+      height: 10%;
+      width: 10%;
+    }
+
+    @keyframes glitchText {
+      0% {
+        text-shadow: 0px 0px red, 0px 0px blue;
+      }
+      5%, 25%, 30%, 50%, 70%, 75%, 95% {
+        text-shadow: -2px -2px red, 2px 2px blue;
+      }
+      10%, 15%, 35%, 40%, 60%, 65%, 85%, 90% {
+        text-shadow: 2px 2px red, -2px -2px blue;
+      }
+      20%, 45%, 80% {
+        text-shadow: 0px 0px red, 0px 0px blue;
+      }
+    }
+
+    /* Media Queries for Mobile */
+    @media only screen and (max-width: 600px) {
+      .image-container .text-overlay {
+        font-size: 24px;
+      }
+
+      .profile img {
+        left: 0;
+        top: -130px;
+        height: 20%;
+        width: 20%;
+      }
+
+      .update h1 {
+        font-size: 24px;
+      }
+
+      .progress-bar {
+        width: 200px;
+      }
+    }
+
+    /* Flexbox Styles */
+    .playlist-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 20px; /* Added margin on the left and right sides */
+    }
+
+    .playlist {
+      width: 30%;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .playlist iframe {
+      width: 100%;
+      height: 352px;
+      border: none;
+    }
+
+    .title-container {
+      position: relative;
+      top: -30px;
+      text-align: center;
+      margin: 20px 0; /* Add margin for spacing */
+    }
+
+    .title-container h1 {
+      font-size: 28px;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="image-container">
+    <div class="tv">
+      <img src="legion.gif" alt="Background Image">
+    </div>
+    <div class="text-overlay">
+      HELLO THERE
+    </div>
+  </div>
+
+  <div class="profile">
+    <img src="van.jpg" alt="Profile Image">
+  </div>
+
+  <div class="title-container">
+    <h1>My Top Brazilian Phonk Tracks</h1>
+  </div>
+
+  <div class="playlist-container">
+    <div class="playlist">
+      <iframe style="border-radius: 12px" src="https://open.spotify.com/embed/track/6Seth37t5I69wFbuGFrsiG?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <div class="playlist">
+      <iframe style="border-radius: 12px" src="https://open.spotify.com/embed/track/0RHqfVaKhtiJcHzllXx4Fo?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <div class="playlist">
+      <iframe style="border-radius: 12px" src="https://open.spotify.com/embed/track/7vtGOauV0Zz8Px5EJYm7d7?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <div class="playlist">
+      <iframe style="border-radius: 12px" src="https://open.spotify.com/embed/track/5qvBojdG05Ec8cUqPKG4Ue?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <div class="playlist">
+      <iframe style="border-radius: 12px" src="https://open.spotify.com/embed/track/12FbZlYxIUv2rhB0oCQEhQ?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <div class="playlist">
+      <iframe style="border-radius: 12px" src="https://open.spotify.com/embed/track/6UsDf89sHDBewBBw7hc0Qc?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+  </div>
+</body>
+</html>
